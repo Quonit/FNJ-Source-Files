@@ -1,0 +1,7 @@
+﻿charset,UTF-8
+type,ghost
+name,Friday Night Jammin'
+directory,FNJ
+
+
+balloon.directory,FNF
