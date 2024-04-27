@@ -1,0 +1,4 @@
+ghost/master/yaya_variable.cfg,noupdate
+shell/old/,nonar
+ghost/master/profile/,nonar,noupdate
+ghost/master/dat/,nonar,noupdate

@@ -450,6 +450,21 @@ OnSecondChange
 	{
 		EndMikireTalk
 	}
+	
+//If you want a count of the total time the user has been listening to music, you can add this to your OnSecondChange
+if Singing
+{
+	Playtime++
+}
+
+//This bit has to go in OnSecondChange
+if DiscordDisplay[1] == 2 && SHIORI3FW.CanTalk //If this ghost was chosen in the Discord plugin, and that hasn't been handled yet
+{
+	DiscordDisplay[1] = 1
+	if BalloonIsOpen; "\C"
+	--
+	"\![raise,OnDiscordPluginBoot]"
+}
 	mikireflag = reference1
 	if reference2 == 1
 	{
@@ -519,95 +534,12 @@ EndMikireTalk
 
 OnSurfaceRestore
 {
+	if Singing == 1
+	{
+		"%(SingingSurfaces)"
+	}
+	else
+	{
 	"\0\s[0]\1\s[10]\e"
-}
-
-OnKeyPress
-{
-	if displaytest == 1
-	{
-		"you pressed a key.\n"
 	}
-	--
-	if reference0 == "f1"
-	{
-	"\![open,readme]"
-	}
-	elseif reference0 == "r"
-	{
-	OnLastTalk
-	}
-	elseif reference0 == "t"
-	{
-	OnAiTalk
-	}
-	/*
-	//else
-//	{
- 		if setkey == "keyplay" || setkey == "keystop" || setkey == "keynext" || setkey == "keyprev" || setkey == "keyclear"
-		{
-			if reference0 _in_ "%(keystop) %(keynext) %(keyprev) %(keyclear) "
-			{
-				"\1\s[1]You're already using that key for something else,\w4 perhaps try a different one?\n\n"
-				--
-				"\![leave,passivemode]"
-			}
-			else
-			{
-				keyplay = reference0
-			}
-		}
-		
-		else //The user didn't want to change a command, so the commands would be verified and lead to which has been pressed.
-		{
-			if muhotkey == "ON"
-			{
-				if reference0 == keyplay
-				{
-					if isplayed == 1
-					{
-						songpaused = songplayed
-						paused = 1
-						Select.playmu
-					}
-					else 
-					{
-						paused = 2
-						Select.playmu
-					}
-				}
-				elseif reference0 == keystop
-				{
-					paused = 0
-					Select.playmu
-				}
-				elseif reference0 == keyprev
-				{
-					Select.previousmu
-				}
-				elseif reference0 == keynext
-				{
-					Select.nextmu
-				}
-				elseif reference0 == keyclear
-				{
-					Select.cleanplaylist
-				}
-				/* elseif reference0 == keyboard
-				{
-					Select.showboard
-				} 
-	}
-		else
-		{
-			if displaytest == 1
-			{
-				"\1\s[1]But the keyboard controls are off...?"
-			}
-		}
-	*/
-	-- //Even if the user didn't want to change any command, always bring back setkey to empty to prevent any problem.
-	setkey = ""
-	--
-	"\e"
 }

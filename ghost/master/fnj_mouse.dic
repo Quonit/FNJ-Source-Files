@@ -279,14 +279,106 @@ Select.keephat
 	}
 }
 
+//This assumes that you have this function over in mouse.dic. If not, this'll be OnMouseDoubleClick
 MouseDoubleClickKero
- {
- 	if reference4 == "Point"
+{
+	_inmenu = CheckWhichMenu
+	
+	//CUSTOMIZE: Hotspots. The only ones included here are for the music player and opening the menu. If you want more for your ghost you'll need to work them in here.
+	if reference4 == "menu" || reference4 == "" //Menu open
 	{
-		//"\1\s[10]This is hitting dialogue.\w8\0\s[5]ha ha\w8\1\s[19]\n\n[half]Quiet.\e"
- 	}
-	else
- 	{
 		OpenKeroMenu
 	}
- }
+	elseif reference4 == "stop_button"//Stopping the music
+	{
+		"\![raise,OnStopSong,%(_inmenu)]"
+	}
+	elseif reference4 == "play_button" //Playing a song. This should always start the next one, probably? If none is playing, it should either start at 0 or a random position... If something is playing, it should skip to the next, I think.
+	{
+		if MenuIsOpen; "\C"
+		--
+		if NowPlaying[0] == "" //If no song is playing
+		{
+			"\![raise,OnPlaySong,,,%(_inmenu)]"
+		}
+		elseif NowPlaying[2] != ""
+		{
+			"\![raise,OnPauseSong,%(_inmenu),resume]"
+		}
+		else //If a song is already playing, go to the next one
+		{
+			"\![raise,OnNextSong,%(_inmenu)]\e"
+		}
+	}
+	elseif reference4 == "pause_resume_button"
+	{
+		if MenuIsOpen; "\C"
+		--
+		if NowPlaying[2] != ""; "\![raise,OnPauseSong,%(_inmenu),resume]"
+		else; "\![raise,OnPauseSong,%(_inmenu),pause]"
+	}
+	elseif reference4 == "next_button"
+	{
+		if NowPlaying[0] != ""
+		{
+			if MenuIsOpen; "\C\![raise,OnNextSong,%(_inmenu)]"
+			else; "\![raise,OnNextSong,%(_inmenu)]\e"
+		}
+	}
+	elseif reference4 == "previous_button"
+	{
+		if NowPlaying[0] != ""
+		{
+			if MenuIsOpen; "\C\![raise,OnPrevSong,%(_inmenu)]"
+			else; "\![raise,OnPrevSong,%(_inmenu)]\e"
+		}
+	}
+	elseif reference4 == "stop_after_current_button"
+	{
+		if MusicSettings[4] != "stop after playback"
+		{
+			MusicSettings[4] = "stop after playback"
+		}
+		else
+		{
+			MusicSettings[4] = ""
+		}
+		if _inmenu == "OnMusicSettings"; "\C\![raise,OnMusicSettings]"
+	}
+	elseif reference4 == "music_menu_button"
+	{
+		OnMusicMenu("manual")
+	}
+	elseif reference4 == "clear_button" //Clearing the current playlist
+	{
+		OnClearPlaylist
+	}
+	elseif reference4 == "song_bar_button" //Song Bar
+	{
+		OnToggleSongBar("Hotspot",_inmenu)
+	}
+	elseif reference4 == "volume_up_button" //Volume up
+	{
+		OnQuickVolume("Up",_inmenu)
+	}
+	elseif reference4 == "volume_down_button" //Volume down
+	{
+		OnQuickVolume("Down",_inmenu)
+	}
+	elseif reference4 == "speed_up_button" //Speed up
+	{
+		OnQuickSpeed("Up",_inmenu)
+	}
+	elseif reference4 == "speed_down_button" //Speed down
+	{
+		OnQuickSpeed("Down",_inmenu)
+	}
+	elseif reference4 == "balance_left_button" //Balance left
+	{
+		OnQuickBalance("Left",_inmenu)
+	}
+	elseif reference4 == "balance_right_button" //Balance right
+	{
+		OnQuickBalance("Right",_inmenu)
+	}
+}

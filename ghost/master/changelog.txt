@@ -1,0 +1,7 @@
+FRIDAY NIGHT JAMMIN' CHANGELOG
+April 27, 2023
+Additions:
+-Added this changelog!
+-Added music player
+-Gave them a website
+-Switched update site to github

@@ -47,6 +47,14 @@ MenuRun
  	\![*]\q[Change his name,Onbfnamechange]\n/
 	\![*]\q[Ask,characterask]\n\n[half]/
  	\![*]\q[Nevermind,CANCEL]\n\n\n[half]\q%(wd) %(nowhour):%(nowmin) %(ap),  %(month)/%(day)/%(year)\e"
+	__GHOST_MAIN_MENU__
+	
+/*
+If you want to have a display on your main menu for the currently playing song, you need to add this after your \e in the menu:
+__GHOST_MAIN_MENU__
+
+This will let it know to run OnMenuRun again if the current song changes/stops/etc. If your menu is in a function other than OnMenuRun, you'll need to change it in a few places in this file. Ctrl F is your friend here.
+*/
 }
 
 OnLastTalk 
@@ -705,7 +713,7 @@ OpenKeroMenu
  	\![*]\q[Change her name,Ongfnamechange]\n/
 	//\![*]\q[Test variable,testvariable]\n/
 	\![*]\q[Ask,charactergfask]\n/
-	\![*]\q[Hear music,Musicmenu]\n\n[half]/
+	\![*]\q[Hear music,OnMusicMenu]\n\n[half]/
 	\![*]\q[Nothing,keroCANCEL]\e"
 }
 
