@@ -129,6 +129,8 @@ TalkConfig
 		"\![*]Enable Uninstall? (NOW : %(deleteshitai))\n\q[ON,deleteon] \q[OFF,deleteoff]\n\n[half]\n"
 		}
 	--
+	"\f[bold,1]Last Update:\f[bold,0] April 26th, 2024\f[sup,0]\n\n"
+	--
 	"\![*]\q[Back to the menu,BACKTOMENU]\e"
 }
 
