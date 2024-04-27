@@ -47,7 +47,6 @@ MenuRun
  	\![*]\q[Change his name,Onbfnamechange]\n/
 	\![*]\q[Ask,characterask]\n\n[half]/
  	\![*]\q[Nevermind,CANCEL]\n\n\n[half]\q%(wd) %(nowhour):%(nowmin) %(ap),  %(month)/%(day)/%(year)\e"
-	__GHOST_MAIN_MENU__
 	
 /*
 If you want to have a display on your main menu for the currently playing song, you need to add this after your \e in the menu:
@@ -716,6 +715,8 @@ OpenKeroMenu
 	\![*]\q[Hear music,OnMusicMenu]\n\n[half]/
 	\![*]\q[Nothing,keroCANCEL]\e"
 }
+
+	//__GHOST_MAIN_MENU__
 
 Select.keroCANCEL
 {
