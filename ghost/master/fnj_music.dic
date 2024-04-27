@@ -1390,12 +1390,14 @@ UpdateTooltips
 //Surfaces used for singing animation
 SingingSurfaces
 {
+	//Singing = 1
 	"\1\s[606]" //snowpoff
 }
 
 //Surfaces to go to when music stops
 NonSingingSurfaces
 {
+	//Singing = 0
 	"\1\s[0]\1\s[10]"
 }
 

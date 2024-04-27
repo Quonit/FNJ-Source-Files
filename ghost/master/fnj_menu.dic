@@ -716,9 +716,8 @@ OpenKeroMenu
 	\![*]\q[Ask,charactergfask]\n/
 	\![*]\q[Hear music,OnMusicMenu]\n\n[half]/
 	\![*]\q[Nothing,keroCANCEL]\e"
+	__GHOST_MAIN_MENU__
 }
-
-	//__GHOST_MAIN_MENU__
 
 Select.keroCANCEL
 {

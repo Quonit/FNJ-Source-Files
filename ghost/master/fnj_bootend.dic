@@ -240,7 +240,7 @@ normalboottalk
 			{
 				"\0\s[7]%(beep)...\w8\1\s[10]%(bfname) is a bit tired right now,\w3 but don't worry!\e"
 				
-				"\1\s[607]Hello %(username).\0s[0]%(beep)!"
+				"\1\s[607]Hello %(username).\0\s[0]%(beep)!"
 			}
 		}
 		elseif timeslot == "latenight"
