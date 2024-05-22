@@ -470,30 +470,30 @@ if DiscordDisplay[1] == 2 && SHIORI3FW.CanTalk //If this ghost was chosen in the
 	{
 		if beeptranslation == "on"
 		{
-			"\0\s[500]\1\s[3500]%(bfname)!\w8\0%(gfname)!!!\w5 %(username) is watching!!\w8\1\n\nI don't think they would mind.\w8\0\n\nBeee.....\w8\w8\w8\w8\w8\w8\0\s[0]\1\s[10]\e"
+			"\0\s[500]\1\s[3500]%(bfname)!\w8\0%(gfname)!!!\w5 %(username) is watching!!\w8\1\n\nI don't think they would mind.\w8\0\n\nBeee.....\w8\w8\w8\w8\w8\w8\0\s[0]\1\s[10]\4"
 			
-			"\0\s[500]\1\s[3502]Surprise kiss!\w8\0Yay!\w8\w8\w8\w8\w8\w8\0\s[0]\1\s[10]\e"
+			"\0\s[500]\1\s[3502]Surprise kiss!\w8\0Yay!\w8\w8\w8\w8\w8\w8\0\s[0]\1\s[10]\4"
 			if WearingHat == 0
 			{
-				"\1\s[500]\0\s[3501]Grrr...\w8\1So fluffy!!!\w8\0\n\nWhy do you like my ears so much anyways?\w8 They're dumb!\w8\1They're adorable!\w8\w8\w8\w8\w8\w8\0\s[0]\1\s[10]\e"
+				"\1\s[500]\0\s[3501]Grrr...\w8\1So fluffy!!!\w8\0\n\nWhy do you like my ears so much anyways?\w8 They're dumb!\w8\1They're adorable!\w8\w8\w8\w8\w8\w8\0\s[0]\1\s[10]\4"
 				
-				"\0\s[500]\1\s[3501]So fluffy!!!\w8\w8\w8\w8\w8\w8\0\s[0]\1\s[10]\e"
+				"\0\s[500]\1\s[3501]So fluffy!!!\w8\w8\w8\w8\w8\w8\0\s[0]\1\s[10]\4"
 				
-				"\0\s[500]\1\s[3501]Awwww!!!\0Sighhh...\w8\w8\w8\w8\w8\w8\0\s[0]\1\s[10]\e"
+				"\0\s[500]\1\s[3501]Awwww!!!\0Sighhh...\w8\w8\w8\w8\w8\w8\0\s[0]\1\s[10]\4"
 			}
 		}
 		else
 		{
-			"\0\s[500]\1\s[3500]%(bfname)!!!!\w8\0Beeeee!\w8\w8\w8\w8\w8\w8\0\s[0]\1\s[10]\e"
+			"\0\s[500]\1\s[3500]%(bfname)!!!!\w8\0Beeeee!\w8\w8\w8\w8\w8\w8\0\s[0]\1\s[10]\4"
 		
-			"\1\s[500]\0\s[3500]%(beep)%(beep) %(beep)!!!!\w8\1%(bfname)!\w8\w8\w8\w8\w8\w8\0\s[0]\1\s[10]\e"
+			"\1\s[500]\0\s[3500]%(beep)%(beep) %(beep)!!!!\w8\1%(bfname)!\w8\w8\w8\w8\w8\w8\0\s[0]\1\s[10]\4"
 		
-			"\0\s[500]\1\s[3500]Hug!!!\w8\0%(beep) %(beep)!\w8\w8\w8\w8\w8\w8\0\s[0]\1\s[10]\e"
+			"\0\s[500]\1\s[3500]Hug!!!\w8\0%(beep) %(beep)!\w8\w8\w8\w8\w8\w8\0\s[0]\1\s[10]\4"
 		
-			"\0\s[500]\1\s[3502]Mwa!\w8\0:D\w8\w8\w8\w8\w8\w8\0\s[0]\1\s[10]\e"
+			"\0\s[500]\1\s[3502]Mwa!\w8\0:D\w8\w8\w8\w8\w8\w8\0\s[0]\1\s[10]\4"
 			if WearingHat == 0
 			{
-				"\1\s[500]\0\s[3501]%(beep) %(beep)-\w8\1So fluffy!!!\w8\w8\w8\w8\w8\w8\0\s[0]\1\s[10]\e"
+				"\1\s[500]\0\s[3501]%(beep) %(beep)-\w8\1So fluffy!!!\w8\w8\w8\w8\w8\w8\0\s[0]\1\s[10]\4"
 			}
 		}			
 	}
